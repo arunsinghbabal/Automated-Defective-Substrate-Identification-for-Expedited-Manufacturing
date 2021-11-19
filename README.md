@@ -21,3 +21,51 @@ In data prediction, first, the essential directories are created. The data valid
 After the prediction, the prediction data is merged with the previous training dataset and then the models were retrained on this data using the hyperparameter values obtained from the GridSearch. The cycle repeats with every prediction it does and learns from the newly acquired data, making it **more robust**.
 # Deployment:
 We will be deploying the model to **Heroku Cloud**.
+
+# Project execution:
+
+**Command line approach** <br />
+
+**Step 1:** First create an environment and install the dependencies listed in the **requirements.txt** file. <br />
+
+>(base) Project_folder>**conda create -n "environment_name" python=3.8** # Create an environment <br />
+>(base) Project_folder>**conda activate "environment_name"** # Activate the created environment <br />
+>(environment) Project_folder>**pip install -r requirements.txt** # Install all the dependencies <br />
+
+**Step 2:** For model training, use the choose.py file.  <br />
+
+>(environment) Project_folder>**python choose.py Train** # To train the models on default files  (provided in the project) <br />
+
+>(environment) Project_folder>**python choose.py Train "User_training_files_location"** # To train the models on the files provided by the user <br />
+
+**Step 3:** To predict the condition of a substrate, and retrain the models on a combined dataset of previously trained and this prediction dataset, run the following commands: <br />
+
+>(environment) Project_folder>**python choose.py Predict** # To predict for the files provided in the project <br />
+
+>(environment) Project_folder>**python choose.py Predict "User_prediction_files_location"** # To predict for the files provided by the user <br />
+> (environment) Project_folder> Model retraining was successful. <br />
+> (environment) Project_folder> After reviewing the performance please delete the prediction csv file and confusion_matrix folder files in the end. <br />
+> (environment) Project_folder> Prediction successful. <br />
+> (environment) Project_folder> Check the folder  project_path/prediction/prediction_output.csv
+
+# Alternatively:
+
+**For an web interface and easy visualization:**  <br />
+
+**Step 1:** First create an environment and install the dependencies listed in the **requirements.txt** file.  <br />
+
+>(base) Project_folder>**conda create -n "environment_name" python=3.8** # Create an environment <br />
+>(base) Project_folder>**conda activate "environment_name"** # Activate the created environment <br />
+>(environment) Project_folder>**pip install -r requirements.txt** # Install all the dependencies
+
+**Step 2:** To train a model run the command: <br />
+
+>(environment) Project_folder>**python train_model_main.py** # It will provide an http:// link, where our program is running. Open the link in the webpage and proceed further. <br />
+![image](https://user-images.githubusercontent.com/93785299/142681694-082f699f-0a58-4f5b-9670-168921fa065b.png)
+
+
+**Step 3:** To predict the condition of a substrate, and retrain the models on a combined dataset of previously trained and this prediction dataset, run the following commands: <br />
+
+>(environment) Project_folder>**python main.py** # It will provide an http:// link, where our program is running. Open the link in the webpage and proceed further. <br />
+![image](https://user-images.githubusercontent.com/93785299/142681206-9f5a0da3-90dd-47c4-a5aa-4238ee61ccfa.png)
+
