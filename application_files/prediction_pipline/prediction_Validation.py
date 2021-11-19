@@ -82,7 +82,7 @@ class PredictionValidation:
             self.directory_creator.del_directory(self.log)
 
             print('Model retraining was successful ')
-            print('After reviewing the performance please delete the prediction csv file and confusion_matrix folder files in the end.')
+            print('After reviewing the performance please delete the prediction_output.csv file and confusion_matrix folder files in the end.')
 
             pred_log_file.close()  # close the log file
             return path, json_predictions
