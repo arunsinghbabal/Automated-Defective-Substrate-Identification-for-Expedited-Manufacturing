@@ -44,7 +44,7 @@ We will be deploying the model to **Heroku Cloud**.
 
 >(environment) Project_folder>**python choose.py Predict "User_prediction_files_location"** # To predict for the files provided by the user <br />
 > (environment) Project_folder> Model retraining was successful. <br />
-> (environment) Project_folder> After reviewing the performance please delete the prediction csv file and confusion_matrix folder files in the end. <br />
+> (environment) Project_folder> After reviewing the performance please delete the prediction_output.csv file and confusion_matrix folder files in the end. <br />
 > (environment) Project_folder> Prediction successful. <br />
 > (environment) Project_folder> Check the folder  project_path/prediction/prediction_output.csv
 
