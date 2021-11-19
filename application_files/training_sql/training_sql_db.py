@@ -66,7 +66,6 @@ class SqlDb:
                 csv_final = csv.writer(open(train_combined_csv_dir + 'train_unprocessed_input.csv', 'w', newline=''),
                                        delimiter=',', lineterminator='\r\n', quoting=csv.QUOTE_ALL, escapechar='\\')
                 csv_final.writerow(dt_col_name)
-                print(dt_col_name)
                 # Write the rows one by one in the input.csv file using the csv_final writer object
                 for x in dt_data:
                     csv_final.writerow(x)
