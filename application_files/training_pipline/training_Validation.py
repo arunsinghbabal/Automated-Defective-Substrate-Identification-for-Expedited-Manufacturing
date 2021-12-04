@@ -74,7 +74,8 @@ class TrainValidation:
             print('Data clustering and labeling was successful')
             print('Data clustering and labeling was successful')
 
-            # Balance the biased dataset
+            # Balance the biased dataset. This step is not necessary because it will not impact the accuracy of the model. The reason is that the
+            # decision trees follow their own hierarchy. Here we are only practicing the idea of balancing the dataset, which will not have positve or negative impact on the outcome..
             X_new = self.model_training.balancing_cluster_count(X_clustered, y, self.log, log_path)
             X_new.to_csv(train_combined_csv_path + 'train_processed_input.csv', header = True, index = False)
             self.log.log(log_file, 'Equalized the ratio of data in each cluster')
