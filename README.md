@@ -1,4 +1,4 @@
-# Retrainable-Faulty-Wafer-Detector
+# Automated Defective Substrate Identification for Expedited Manufacturing
 
 # Aim of the project:
 In electronics, a wafer (also called a slice or substrate) is a thin slice of semiconductor, such as crystalline silicon (c-Si), used for the fabrication of integrated circuits and, in photovoltaics, to manufacture solar cells. The wafer serves as the substrate for microelectronic devices built in and upon the wafer. The project aims to successfully identify the state of the provided wafer by classifying it between one of the two-class +1 (good, can be used as a substrate) or -1 (bad, the substrate need to be replaced) and then train the model on this data so that it can continuously update itself with the environment and become more generalized with time. In this regard, a training and prediction dataset is provided to build a machine learning classification model, which can predict the wafer quality.
